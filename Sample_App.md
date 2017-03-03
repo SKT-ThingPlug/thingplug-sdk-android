@@ -107,7 +107,7 @@ Actuator 목록
 	<br/><img src="images/remote_sensor_list.png" width="25%"/>
 	- 전체 센서 목록이 나열되며, Device App에서 미지원하거나 꺼진(DISABLED) 센서의 경우 비활성화된 상태로 표시됩니다.
 	- 센서 활성화(ACTIVATED)/비활성화(DEACTIVATED) 기능 : Device App의 센서 활성화 상태를 원격에서 변경합니다.
-	- 특정 센서 선택 시 해당 센서 상세 화면으로 이동한다.
+	- 특정 센서 선택 시 해당 센서 상세 화면으로 이동합니다.
 6. 센서 상세 화면
 	<br/><img src="images/sensor_detail.png" width="25%"/>
     - 센서 상태값을 그래프로 표시합니다. 센서값에 따라 세로축이 가변으로 변하도록 설정되어 있습니다.

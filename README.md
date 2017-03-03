@@ -205,7 +205,7 @@ SKT ThingPlug 서버와 oneM2M 통신을 위한 API 는 `tp.skt.onem2m.api.oneM2
 __getInstance()__ | Singletone 객체를 가져온다.
 __tpRegisterDevice__ | 장치를 등록한다. (node 와 remoteCSE 를 등록한다.)
 __tpRegisterContainer__ | 센서를 등록한다. (container 를 등록한다.)
-__tpRegisterMgmtCmd__ | 제어를 등록한다. (mgmtCmd 를 등록한다.)
+__tpRegisterMgmtCmd__ | 제어명령을 등록한다. (mgmtCmd 를 등록한다.)
 __tpAddData__ | 센서정보를 추가한다. (contentInstance 의 content(con) 에 담을 정보를 추가한다.)
 __tpReport__ | 센서정보를 등록한다. (contentInstance 를 등록한다.)
 __tpResult__ | 제어결과를 업데이트한다. (execInstance 를 업데이트한다.)
@@ -358,7 +358,7 @@ public void controlResult(String mgmtCmdName, String resourceId, String execResu
 			});
 }
 ```
-> execResult 와 execStatus 코드는 **[ThingPlug_API_Document_v1_2.pdf](https://lora.sktiot.com/api/common/file/download?fileId=00EHVA8TRRAME2403FEA)** 문서 6.5.3 절에서 확인 가능합니다.
+> execResult 와 execStatus 코드는 **[ThingPlug_API_Document_v1_61.pdf](https://lora.sktiot.com/api/common/file/download?fileId=00ENAMSVLO3W67609B4D)** 문서 6.5.3 절에서 확인 가능합니다.
 
 ### Error Code
 `MQTTCallback`을 통해 발생한 응답의 성공 실패 여부를 확인하는 코드는 `tp.skt.onem2m.binder.mqtt_v1_1.Definitions.java`에 정의되어 있으며 다음과 같습니다.
