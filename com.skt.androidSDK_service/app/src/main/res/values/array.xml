@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="buzzer_items">
+        <item>Off</item>
+        <item>Ringtone</item>
+        <item>Notification</item>
+        <item>Alarm</item>
+    </string-array>
+
+    <string-array name="led_items">
+        <item>Off</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Magenta</item>
+        <item>Cyan</item>
+        <item>Yellow</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="camera_items">
+        <item>Back camera</item>
+        <item>Front camera</item>
+    </string-array>
+</resources>

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId 'com.skt.onem2m_service'
+        minSdkVersion 18
+        targetSdkVersion 24
+        versionCode 1
+        versionName "0.9.4"
+
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.0'
+    compile 'com.android.support:design:24.2.0'
+    compile files('../libs/achartengine-1.2.0.jar')
+    compile project(':onem2m')
+    compile 'com.google.android.gms:play-services:10.0.1'
+    compile 'com.android.support:multidex:1.0.0'
+}
+

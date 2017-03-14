@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">ThingPlug Service</string>
+
+    <string name="actionbar_login">Login</string>
+    <string name="actionbar_terms">Terms</string>
+    <string name="actionbar_deviceList">Select device</string>
+    <string name="actionbar_list">Remote Sensor List</string>
+    <string name="actionbar_detail">Sensor Detail</string>
+    <string name="actionbar_setting">Setting</string>
+    <string name="actionbar_setting_server_info">Change server info.</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_id">ID</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="thingplug_regist_url"><u>Join to be a ThingPlug member</u></string>
+    <string name="change_server_info">Change Server Info.</string>
+    <string name="login_fail">Fail to login. Please check the server info.</string>
+    <string name="error_invalid_email">This ID is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+
+    <string name="actuator_run">Run</string>
+    <string name="actuator_disabled">Actuator is not enabled.</string>
+
+    <string name="actuator_dialog_title">Select one</string>
+    <string name="actuator_dialog_ok">OK</string>
+    <string name="actuator_dialog_cancel">Cancel</string>
+
+    <string name="control_success">Success to control %1$s.</string>
+    <string name="control_fail">Fail to control %1$s.</string>
+    <string name="control_timeout">Timeout to control %1$s.</string>
+
+    <string name="setting_menu">Settings</string>
+    <string name="setting_read">Sensor read interval</string>
+    <string name="setting_transfer">Transfer interval</string>
+    <string name="setting_update_list">List update interval</string>
+    <string name="setting_update_graph">Graph update interval</string>
+    <string name="setting_measure">msec</string>
+    <string name="setting_error">Unable to set under %1$dmsec in %2$s.</string>
+    <string name="setting_save">Save</string>
+    <string name="setting_cancel">Cancel</string>
+    <string name="setting_logout">Logout</string>
+
+    <string name="setting_portal">ThingPlug portal</string>
+    <string name="setting_login">Login</string>
+    <string name="setting_search">Search</string>
+    <string name="setting_register">Register</string>
+    <string name="setting_server">ThingPlug server</string>
+    <string name="setting_url">URL</string>
+    <string name="setting_appeui">AppEUI</string>
+    <string name="setting_use_tls">Use TLS</string>
+    <string name="setting_use_tlv_tdv">TLV/TDV</string>
+    <string name="setting_use_tlv">TLV</string>
+    <string name="setting_use_tdv">TDV</string>
+    <string name="setting_load_default">Load default</string>
+</resources>
