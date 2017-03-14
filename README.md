@@ -414,3 +414,4 @@ public @interface ResponseStatusCode {
 * **[Sample Device/Service App Guide](Sample_App.md)** - Device & Service App 설명
 
 Copyright (c) 2017 SK Telecom Co., Ltd. All Rights Reserved.
+Distributed under Apache License Version 2.0.
