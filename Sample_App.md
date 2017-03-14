@@ -77,7 +77,7 @@ Actuator 목록
     - 센서 정보 전송 간격(Transfer interval, msec) : 센서 정보를 ThingPlug 서버로 전송하는 간격
     - 센서 목록 갱신 간격(List update interval) : 센서 목록 화면을 갱신하는 간격
     - 센서 상태 그래프 갱신 간격(Graph update interval) : 센서 상세 화면의 그래프를 갱신하는 간격
-    - LOGOUT : ThingPlug 포털에서 로그아웃합니다. 단, 기기해지는 자동으로 되지 않으므로 ThingPlug 포털에서 수동으로 기기해지를 해주어야, 향후 해당 단말을 재등록할 수 있습니다.
+    - LOGOUT : ThingPlug 포털에서 로그아웃합니다. 단, 기기해지는 자동으로 되지 않으므로 ThingPlug 포털에서 수동으로 기기해지(삭제)를 해주어야, 향후 해당 단말을 재등록할 수 있습니다.
 
 ## Service Application
 ---
@@ -117,3 +117,5 @@ Actuator 목록
     - 센서 목록 갱신 간격(List update interval) : 센서 목록 화면을 갱신하는 간격
     - 센서 상태 그래프 갱신 간격(Graph update interval) : 센서 상세 화면의 그래프를 갱신하는 간격
     - LOGOUT : ThingPlug 포털에서 로그아웃합니다. 서버환경설정 변경이 필요할 경우, 로그아웃해야 합니다.
+
+Copyright (c) 2017 SK Telecom Co., Ltd. All Rights Reserved.
