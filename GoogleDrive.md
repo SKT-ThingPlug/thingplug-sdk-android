@@ -31,3 +31,6 @@ Android Studio 환경에서 Google Drive API 사용을 위한 방법을 설명�
 ## 관련 사이트
 * **[Google Drive Android API Official](https://developers.google.com/drive/android/intro)**
 * **[Authorizing Android Apps](https://developers.google.com/drive/android/auth)**
+
+
+Copyright (c) 2017 SK Telecom Co., Ltd. All Rights Reserved.
