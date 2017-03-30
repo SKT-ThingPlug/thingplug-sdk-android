@@ -250,6 +250,8 @@ public class OneM2MWorker {
             Log.e(TAG, "Serial is NULL!");
             passcode = "12345"; //default
         }
+        else
+            Log.i(TAG, "Serial is " + Build.SERIAL);
         oneM2MAPI.getInstance().tpRegisterDevice(mqttService, passcode,
                 "3", "true", new MQTTCallback<remoteCSEResponse>() {
                     @Override
@@ -434,6 +436,7 @@ public class OneM2MWorker {
             Log.e(TAG, "No dKey Found!");
             return;
         }
+        Log.i(TAG, "dKey: " + dKey);
 
         try {
             mgmtCmd mgmtCmdDelete = new mgmtCmd.Builder(Definitions.Operation.Delete).

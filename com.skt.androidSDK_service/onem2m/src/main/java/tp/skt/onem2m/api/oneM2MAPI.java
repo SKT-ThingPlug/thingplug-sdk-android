@@ -87,9 +87,8 @@ public class oneM2MAPI {
                             remoteCSE remoteCSECreate = new remoteCSE.Builder(Definitions.Operation.Create).
                                     passCode(passcode).
                                     cst(cseType).
-//                                    poa("MQTT|{" + MQTTConst.RESOURCE_ID + "}").
-        rr(requestRechability).
-                                            nl(response.getRi()).build();
+                                    rr(requestRechability).
+                                    nl(response.getRi()).build();
 
                             mqttService.publish(remoteCSECreate, new MQTTCallback<remoteCSEResponse>() {
                                 @Override

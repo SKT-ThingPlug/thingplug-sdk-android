@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class Utils {
     private static final String     TAG = Utils.class.getSimpleName();
-
+    private static final boolean    isLittleEndian = true; // default true for TLV, false for TDV
     /**
      * get MAC address
      */
@@ -63,27 +63,44 @@ public class Utils {
     }
 
     public static short swap(short x) {
-        return (short) ((x << 8) | ((x >> 8) & 0xff));
+        if( isLittleEndian == true)
+            return (short) ((x << 8) | ((x >> 8) & 0xff));
+        else
+            return x;
     }
 
     public static char swap(char x) {
-        return (char) ((x << 8) | ((x >> 8) & 0xff));
+        if( isLittleEndian == true)
+            return (char) ((x << 8) | ((x >> 8) & 0xff));
+        else
+            return x;
     }
 
     public static int swap(int x) {
-        return (int) ((swap((short) x) << 16) | (swap((short) (x >> 16)) & 0xffff));
+        if( isLittleEndian == true)
+            return (int) ((swap((short) x) << 16) | (swap((short) (x >> 16)) & 0xffff));
+        else
+            return x;
     }
 
     public static long swap(long x) {
-        return (long) (((long) swap((int) (x)) << 32) | ((long) swap((int) (x >> 32)) & 0xffffffffL));
+        if( isLittleEndian == true)
+            return (long) (((long) swap((int) (x)) << 32) | ((long) swap((int) (x >> 32)) & 0xffffffffL));
+        else return x;
     }
 
     public static float swap(float x) {
-        return Float.intBitsToFloat(swap(Float.floatToRawIntBits(x)));
+        if( isLittleEndian == true)
+            return Float.intBitsToFloat(swap(Float.floatToRawIntBits(x)));
+        else
+            return x;
     }
 
     public static double swap(double x) {
-        return Double.longBitsToDouble(swap(Double
+        if( isLittleEndian == true)
+            return Double.longBitsToDouble(swap(Double
                 .doubleToRawLongBits(x)));
+        else
+            return x;
     }
 }

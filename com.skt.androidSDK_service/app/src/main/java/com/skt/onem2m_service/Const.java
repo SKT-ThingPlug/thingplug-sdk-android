@@ -20,7 +20,7 @@ public class Const {
     public static final String URL_REGISTER_DEVICE = "/ThingPlug?division=device&function=regist";
 
     public static final String URL_SERVER_DEFAULT = "thingplugtest.sktiot.com:8883";
-    public static final String SERVER_APPEUI_DEFAULT = "ThingPlug";
+    public static final String SERVER_APPEUI_DEFAULT = "Android";
     public static final boolean USE_TLS_DEFAULT = true;
     public static final boolean USE_TLV_DEFAULT = true;
 

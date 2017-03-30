@@ -570,7 +570,11 @@ public class SensorListActivity extends AppCompatActivity {
     }
 
     private void resultControlDevice(boolean isSuccess, int resString, SensorInfo sensorInfo, Button button) {
-        button.setEnabled(true);
+        if(button != null) {
+            button.setEnabled(true);
+        } else {
+            sensorInfo.setSuspend(false);
+        }
         if (!isSuccess) {
             if (sensorInfo.getType().getCategory() != SensorType.Category.ACTUATOR) {
                 sensorInfo.setActivated(!sensorInfo.isActivated());

@@ -8,7 +8,7 @@ import tp.skt.onem2m.net.mqtt.MQTTCallback;
 @MQTT(
         subscribe = {
                 "/oneM2M/resp/{CLIENT_ID}/+",
-                "/oneM2M/req/+/{CLIENT_ID}"
+                "/oneM2M/req_msg/+/{CLIENT_ID}"
         },
         publish = "/oneM2M/req/{CLIENT_ID}/{CSEBASE}"
 )

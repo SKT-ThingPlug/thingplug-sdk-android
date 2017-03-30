@@ -44,6 +44,10 @@ import java.util.Arrays;
 public class Camera {
 
     private static final String TAG = "CAMERA";
+    /**
+     * Orientation of the camera sensor
+     **/
+    private int mSensorOrientation;
 
     /**
      * type list
@@ -233,6 +237,7 @@ public class Camera {
                 int cOrientation = characteristics.get(CameraCharacteristics.LENS_FACING);
                 if (cOrientation == cameraType) {
                     id = cameraId;
+                    mSensorOrientation = characteristics.get(CameraCharacteristics.SENSOR_ORIENTATION);
                 }
             }
             if (id.isEmpty()) {
@@ -299,12 +304,16 @@ public class Camera {
                     ORIENTATIONS.append(Surface.ROTATION_270, 180);
                     WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
                     int rotation = wm.getDefaultDisplay().getRotation();
+                    int orientation = ORIENTATIONS.get(rotation);
+                    if ((orientation == 0 || orientation == 180) == false) {
+                        orientation = (orientation + mSensorOrientation + 270) % 360;
+                    }
 
                     try {
                         CaptureRequest.Builder captureBuilder = cameraCaptureSession.getDevice().createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
                         captureBuilder.addTarget(reader.getSurface());
                         captureBuilder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
-                        captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, ORIENTATIONS.get(rotation));
+                        captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, orientation);
                         cameraCaptureSession.capture(captureBuilder.build(), new CameraCaptureSession.CaptureCallback() {
                             @Override
                             public void onCaptureCompleted(CameraCaptureSession session, CaptureRequest request, TotalCaptureResult result) {
