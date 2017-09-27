@@ -111,13 +111,13 @@ TLS 사용을 위해서는 MQTT broker 주소앞에 `ssl://` 을 포함하면 �
 
 TLS 사용 시, ThingPlug의 MQTT broker 주소는 다음과 같습니다.
 ```
-ssl://thingplugtest.skitiot.com
+ssl://mqtt.skitiot.com
 ```
 TLS를 사용하지 않을 경우, MQTT broker 주소앞에 `tcp://` 를 포함하면 됩니다. 포트번호가 `1883`인 경우 생략 가능합니다.
 
 TLS 미사용 시, ThingPlug의 MQTT broker 주소는 다음과 같습니다.
 ```
-tcp://thingplugtest.skitiot.com
+tcp://mqtt.skitiot.com
 ```
 
 
