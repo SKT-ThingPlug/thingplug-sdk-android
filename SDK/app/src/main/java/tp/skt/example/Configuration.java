@@ -7,8 +7,8 @@ package tp.skt.example;
  * Written 2017, by SK Telecom
  */
 public class Configuration {
-    public static final String MQTT_HOST = "tcp://thingplugtest.sktiot.com";
-    public static final String MQTT_SECURE_HOST = "ssl://thingplugtest.sktiot.com";
+    public static final String MQTT_HOST = "tcp://mqtt.sktiot.com";
+    public static final String MQTT_SECURE_HOST = "ssl://mqtt.sktiot.com";
 
     public static final String CSEBASE = "ThingPlug";
     public static final String ONEM2M_TO = "/ThingPlug/v1_0";
